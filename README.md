@@ -1,2 +1,2 @@
 # printf project
-made it by Jorge Tuset and Miguel Pacheco
+Made it by Jorge Tuset and Miguel Pacheco

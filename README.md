@@ -33,4 +33,4 @@ va_arg (man 3 va_arg)
 
 # Compilation
 Your code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic *.c
+<code>$ gcc -Wall -Werror -Wextra -pedantic *.c</code>

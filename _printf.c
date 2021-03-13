@@ -7,6 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
+	int i;
         /* in case that doesn't contain nothing == NULL*/
         if (format == NULL)
                 return (-1);

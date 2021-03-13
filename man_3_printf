@@ -1,4 +1,4 @@
-.TH man 1 "03 March 2021" "1.0" "_printf man page"
+.TH man 1 "03 March 2021" "0.9" "_printf man page"
 .SH NAME
 .B _printf man page
 .SH SYNOPSIS
@@ -19,13 +19,38 @@ _printf() is a family of functions that produces output according to a format
 - Prints a string of characters
 
 .B %i
--Prints an integer
+- Prints an integer
 
 .B %d
 - Prints a decimal
 
 .B %%
 - Prints a single %
+
+.SH IN FUTURE DEVELOPMENT (NOT SURE)
+.B %b
+- Converts from decimal to binary
+
+.B %u
+- Prints an unsigned integer
+
+.B %x
+- Converts a decimal to hexadecimal (in lowercase letter characters when applicable)
+
+.B %X
+- Converts a decimal to hexadecimal (in uppercase letter characters when applicable)
+
+.B %o
+- Converts a decimal to octal
+
+.B %r
+- Reverses a string
+
+.B %R
+- Converts to ROT13
+
+.B %S
+- Prints non-printable characters in hexadecimal
 
 .SH EXAMPLES
 .B --- Print a single character 'a' followed by a newline:
@@ -54,6 +79,14 @@ _printf("%i\n", 3);
 _printf("%%\n")
 
 # %
+
+.B More examples in the future (or maybe not)
+
+.SH SEE ALSO
+man page printf(3) (man 3 printf)
+
+.SH BUGS
+Not Sure ¯\_(ツ)_/¯
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

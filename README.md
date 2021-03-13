@@ -3,8 +3,6 @@
 # Information
 Write your own printf function.
 
-<br>
-
 # Requirements
 
   # General
@@ -22,7 +20,6 @@ Write your own printf function.
       All your header files should be include guarded
       Note that we will not provide the _putchar function for this project
       
-<br>
 # More Info
  
   ## Authorized functions and macros

@@ -2,8 +2,15 @@
 .SH NAME
 _printf - a function that prints something
 .SH SYNOPSIS
-_printf [format] [argument] ...
+.B Use: _printf [format] [argument] ...
 
+.B Prototype:
+int _printf(const char * format, ...);
+
+.SH DESCRIPTION
+_printf() is a family of functions that produces output according to a format
+
+.SH OPTIONS
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

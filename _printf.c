@@ -15,9 +15,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format [i + 1] == 'c')
+			if (format[i + 1] == 'c')
 				_putchar(format[i + 1]);
-			if (format [i + 1] == 's')
+			if (format[i + 1] == 's')
 				/*string magical shenanigans happen here */
 		i = i + 2;
 		}

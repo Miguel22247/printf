@@ -3,3 +3,7 @@
 _printf - a function that prints something
 .SH SYNOPSIS
 _printf [format] [argument] ...
+
+
+.SH AUTHOR
+Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

@@ -55,28 +55,28 @@ _printf() is a family of functions that produces output according to a format
 .SH EXAMPLES
 .B --- Print a single character 'a' followed by a newline:
 
-_printf ("%c\n", 'a');
+_printf ("%c\\n", 'a');
 
 # a
 
 
 .B --- Print a string of characters 'Holberton School!' followed by a newline:
 
-_printf ("%s\n", "Holberton School!");
+_printf ("%s\\n", "Holberton School!");
 
 # Holberton School!
 
 
 .B --- Print an integer number 3 followed by a newline:
 
-_printf("%i\n", 3);
+_printf("%i\\n", 3);
 
 # 3
 
 
 .B --- Print a single % followed by a newline:
 
-_printf("%%\n")
+_printf("%%\\n")
 
 # %
 

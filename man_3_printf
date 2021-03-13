@@ -1,6 +1,6 @@
 .TH man 1 "03 March 2021" "1.0" "_printf man page"
 .SH NAME
-_printf - a function that prints something
+.B _printf man page
 .SH SYNOPSIS
 .B Use: _printf [format] [argument] ...
 
@@ -11,6 +11,49 @@ int _printf(const char * format, ...);
 _printf() is a family of functions that produces output according to a format
 
 .SH OPTIONS
+
+.B %c
+- Prints a single character
+
+.B %s
+- Prints a string of characters
+
+.B %i
+-Prints an integer
+
+.B %d
+- Prints a decimal
+
+.B %%
+- Prints a single %
+
+.SH EXAMPLES
+.B --- Print a single character 'a' followed by a newline:
+
+_printf ("%c\n", 'a');
+
+# a
+
+
+.B --- Print a string of characters 'Holberton School!' followed by a newline:
+
+_printf ("%s\n", "Holberton School!");
+
+# Holberton School!
+
+
+.B --- Print an integer number 3 followed by a newline:
+
+_printf("%i\n", 3);
+
+# 3
+
+
+.B --- Print a single % followed by a newline:
+
+_printf("%%\n")
+
+# %
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

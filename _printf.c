@@ -8,6 +8,19 @@
 int _printf(const char *format, ...)
 {
         /* in case that doesn't contain nothing == NULL*/
-        if (/*variable*/ == NULL)
+        if (format == NULL)
                 return (-1);
+	for (i = 0; format[i] != '\0; i++)
+	{
+		if (format[i] == '%')
+		{
+			if (format [i + 1] == 'c')
+				_putchar(format[i + 1]);
+			if (format [i + 1] == 's')
+				/*string magical shenanigans happen here */
+		i = i + 2;
+		}
+		_putchar(format[i]);
+	}
+	return (*format);
 }

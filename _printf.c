@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-        /* in case that the string is NULL*/
+        /* in case that doesn't contain nothing == NULL*/
         if (/*variable*/ == NULL)
                 return (-1);
 }

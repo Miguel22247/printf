@@ -1,4 +1,4 @@
-.TH man 1 "03 March 2021" "1.0" _printf man page"
+.TH man 1 "03 March 2021" "1.0" "_printf man page"
 .SH NAME
 _printf - a function that prints something
 .SH SYNOPSIS

@@ -26,9 +26,10 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'i')
 				_putchar(format[i + 1]);
 /*string magical shenanigans happen here */
-                                i = i + 2;
-                }
+                i++;
+		}
                 _putchar(format[i]);
+		i++;
         }
         return (*format);
 }

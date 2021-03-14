@@ -29,7 +29,6 @@ int _printf(const char *format, ...)
                 i++;
 		}
                 _putchar(format[i]);
-		i++;
         }
         return (*format);
 }

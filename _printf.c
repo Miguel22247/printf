@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
                         if (format[i + 1] == '%')
                                 _putchar (format[i]);
                         if (format[i + 1] == 'c')
-                                _putchar(format[i + 1]);
+                                _putchar(format[i + 1],'H');
                         if (format[i + 1] == 's')
                                 _putchar(format[i + 1]);
 			if (format[i + 1] == 'd')

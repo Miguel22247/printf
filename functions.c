@@ -22,10 +22,11 @@ int print_mod(va_list list)
 	char c = '%';
 	write(1, &c, 1);
 	va_end(list);
-	return(1);
+	return (1);
 }
 int print_i(va_list list)
 {
 	int i;
-	
+	va_end(list);
+	return (1);
 }

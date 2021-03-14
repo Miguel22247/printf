@@ -27,6 +27,7 @@ int print_mod(va_list list)
 int print_i(va_list list)
 {
 	int i;
+	write(1, &i, 1);
 	va_end(list);
 	return (1);
 }

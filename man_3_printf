@@ -86,7 +86,7 @@ _printf("%%\\n")
 man page printf(3) (man 3 printf)
 
 .SH BUGS
-Doesn't print correctly characters, strings and integers
+At the moment NO Bugs :)
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14 | Montevideo Campus | All rights reserved

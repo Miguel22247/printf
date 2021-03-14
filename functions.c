@@ -31,3 +31,10 @@ int print_i(va_list list)
 	va_end(list);
 	return (1);
 }
+int print_d(va_list list)
+{
+	int i;
+	write(1, &i, 1);
+	va_end(list);
+	return (1);
+}

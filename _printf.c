@@ -7,28 +7,41 @@
  */
 int _printf(const char *format, ...)
 {
-        int i;
-/* in case that doesn't contain nothing == NULL*/
-	if (format == NULL)
-		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	va_list ap;
+	int length = 0;
+	int i = 0, j;
+
+	pr_f ops[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{"%", print_mod},
+		{"d", print_i},
+		{"i", print_i},
+		{NULL, NULL}
+	};
+	va_start (ap, format);
+	while (format != NULL && format[i] != '\0')
 	{
+		j = 0;
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
-				_putchar (format[i]);
-			if (format[i + 1] == 'c')
-				_putchar(format[i + 1]);
-                        if (format[i + 1] == 's')
-				_putchar(format[i + 1]);
-			if (format[i + 1] == 'd')
-				_putchar(format[i + 1]);
-			if (format[i + 1] == 'i')
-				_putchar(format[i + 1]);
-/*string magical shenanigans happen here */
-                i++;
+			i += 1;
+			while (ops[j].op != NULL)
+			{
+				if (format[i] == ops[j].op[0])
+				{
+					length += ops[j].f(ap);
+					break;
+				}
+				j++;
+			}
 		}
-                _putchar(format[i]);
-        }
-        return (*format);
+		else
+		{
+			length += _putchar(format[i]);
+		}
+		i++;
+	}
+	va_end (ap);
+	return (length);
 }

@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 				_putchar(format[i + 1]);
 			if (format[i + 1] == 's')
+				_putchar(format[i + 1]);
 /*string magical shenanigans happen here */
 				i = i + 2;
 		}

@@ -69,7 +69,7 @@ int print_r(va_list list)
 	char *str = "%r";
 	int len = _strlen(str);
 
-	_putchar(*str);
+	write(1, str, len);
 	va_end(list);
 	return (len);
 }

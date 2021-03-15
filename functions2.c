@@ -9,17 +9,9 @@ int print_c(va_list list)
 {
 	char *c = va_arg(list, char *);
 
-	if (c == NULL)
-	{
-		c = NULL;
-		return (-1);
-	}
-	else
-	{
-		write(1, &c, 1);
-		va_end(list);
-		return (1);
-	}
+	write(1, &c, 1);
+	va_end(list);
+	return (1);
 }
 /**
  * print_s - prints a string

@@ -8,6 +8,7 @@
 #include <stddef.h>
 #include <string.h>
 
+/* struct */
 typedef struct pr
 {
 	char *op;

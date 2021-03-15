@@ -7,10 +7,10 @@
 
 int print_c(va_list list)
 {
-char *c = va_arg(list, char *);
-write(1, &c, 1);
-va_end(list);
-return (1);
+	char *c = va_arg(list, char *);
+	write(1, &c, 1);
+	va_end(list);
+	return (1);
 }
 
 /**
@@ -21,25 +21,25 @@ return (1);
 
 int print_s(va_list list)
 {
-char *str = va_arg(list, char *);
-int len = strlen(str);
-write(1, str, len);
-va_end(list);
-return (len);
+	char *str = va_arg(list, char *);
+	int len = strlen(str);
+	write(1, str, len);
+	va_end(list);
+	return (len);
 }
 
 /**
  * print_mod - print a '%' sign
  * @list: list
  * Return: a '%' sign
-*/
+ */
 
 int print_mod(va_list list)
 {
-char c = '%';
-write(1, &c, 1);
-va_end(list);
-return (1);
+	char c = '%';
+	write(1, &c, 1);
+	va_end(list);
+	return (1);
 }
 
 /**
@@ -99,4 +99,11 @@ int print_d(va_list list)
 	output = va_arg(list, int);
 	count = printnum(output);
 	return (count);
+}
+int print_r(va_list list)
+{
+	char c[] = "%r";
+        write(1, &c, 1);
+        va_end(list);
+        return (1);
 }

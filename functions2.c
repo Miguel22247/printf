@@ -22,20 +22,11 @@ int print_c(va_list list)
 int print_s(va_list list)
 {
 	char *str = va_arg(list, char *);
-	int i;
+	int len = _strlen(str);
 
-	if (str == NULL)
-	{
-		str = "(null)";
-		return (-1);
-	}
-	else
-	{
-		for (i = 0; str[i]; i++)
-			_putchar(str[i]);
-		va_end(list);
-		return (*str);
-	}
+	write(1, str, len);
+	va_end(list);
+	return (len);
 }
 /**
  * print_mod - print a '%' sign

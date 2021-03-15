@@ -102,8 +102,9 @@ int print_d(va_list list)
 }
 int print_r(va_list list)
 {
-	char c[] = "%r";
-        write(1, &c, 1);
+	char *str = "%r";
+       int len = strlen(str);
+        write(1, str, len);
         va_end(list);
-        return (1);
+        return (len);
 }

@@ -41,3 +41,36 @@ write(1, &c, 1);
 va_end(list);
 return (1);
 }
+
+/**
+ * rec_pd - Helper function for counting
+ * @num: number that gets added recursively
+ * @cont: char for counting
+ * Return: void
+ */
+
+void rec_pd(int num, int *cont)
+{
+	if (num != 0)
+	{
+		rec_pd(num / 10, cont);
+		_putchar(num % 10 + '0');
+		*cont += 1;
+	}
+}
+
+/**
+ * print_d - prints numbers. Integers and decimals!
+ * @list: list
+ * Return: a number
+ */
+
+int print_d(va_list list)
+{
+	int in = va_arg(list, int);
+	int count = 0;
+
+	rec_pd(in, &count);
+	va_end(list);
+	return (count);
+}

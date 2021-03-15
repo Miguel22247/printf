@@ -3,6 +3,9 @@
 # Information
 Write your own printf function.
 
+# Code Style
+Betty code style
+
 # Requirements
 
   # General
@@ -22,6 +25,15 @@ Write your own printf function.
       
 # More Info
  
+ In this project we need to write a function that works similar to the original function printf in 'C', for to do this task first we start for understand the function and how printf does this function we make a very basic flowchart with the things that we believe that printf does, after that we started for writing all the functions that we use later and creating the header file with all the libraries and prototypes that we use in the program.
+ 
+## How to test the "printf function"
+- [Clone]("https://github.com/Miguel22247/printf") this repository
+- mv the file main.c that it's in test folder to printf folder
+- use <code>$ gcc -Wall -Werror -Wextra -pedantic *.c</code> to compile it
+- run with ./a.out (is the default output)
+<br>
+
   ## Authorized functions and macros
 - write (man 2 write)
 - malloc (man 3 malloc)
@@ -35,3 +47,6 @@ Write your own printf function.
 # Compilation
 Your code will be compiled this way:
 <code>$ gcc -Wall -Werror -Wextra -pedantic *.c</code>
+
+# Created by:
+Jorge Tuset and Miguel Pacheco | Cohort 14 | Holberton School

@@ -44,14 +44,21 @@ int print_mod(va_list list)
 	return (1);
 }
 
+/**
+ * _strlen - Checks how long is a string
+ * @s: String
+ * Return: 0 or the length
+ */
+
 int _strlen(char *s)
 {
-    if (*s == '\0')
-    {
-        return (0);
-    }
-    else
-    {
-        return (1 + _strlen(s + 1));
-    }
+	if (*s == '\0')
+	{
+		return (0);
+	}
+		else
+	{
+		return (1 + _strlen(s + 1));
+	}
 }
+

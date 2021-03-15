@@ -43,20 +43,46 @@ return (1);
 }
 
 /**
- * rec_pd - Helper function for counting
- * @num: number that gets added recursively
- * @cont: char for counting
+ * printnum - Helper function for counting
+ * @n: number that gets added recursively
  * Return: void
  */
 
-void rec_pd(int num, int *cont)
+int printnum(int n)
 {
-	if (num != 0)
+	int count = 0;
+	unsigned int num;
+	unsigned int dig;
+	unsigned int i;
+	unsigned int long_num;
+
+	long_num = n;
+	if (n < 0)
 	{
-		rec_pd(num / 10, cont);
-		_putchar(num % 10 + '0');
-		*cont += 1;
+		count++;
+		long_num = long_num * -1;
+		_putchar('-');
 	}
+	if (long_num == 0)
+	{
+		count++;
+		_putchar('0');
+		return (count);
+	}
+	i = 1;
+	while (((long_num / i) > 9))
+	{
+		i = i * 10;
+	}
+	while (i > 0)
+	{
+		num = long_num / i;
+		dig = num % 10;
+		count++;
+		_putchar(dig + '0');
+		i = (i / 10);
+	}
+	return (count);
 }
 
 /**
@@ -67,10 +93,10 @@ void rec_pd(int num, int *cont)
 
 int print_d(va_list list)
 {
-	int in = va_arg(list, int);
-	int count = 0;
+	int output;
+	int count;
 
-	rec_pd(in, &count);
-	va_end(list);
+	output = va_arg(list, int);
+	count = printnum(output);
 	return (count);
 }

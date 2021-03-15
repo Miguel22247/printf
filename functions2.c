@@ -33,6 +33,7 @@ int print_s(va_list list)
 	{
 		for (i = 0; str[i]; i++)
 			_putchar(str[i]);
+		va_end(list);
 		return (*str);
 	}
 }

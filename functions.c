@@ -24,8 +24,3 @@ int print_mod(va_list list)
 	va_end(list);
 	return (1);
 }
-int print_i(va_list list)
-{
-	int i;
-	
-}

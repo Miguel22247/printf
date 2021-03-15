@@ -8,7 +8,13 @@
 #include <stddef.h>
 #include <string.h>
 
-/* struct */
+/**
+ * struct pr - struct for operations
+ * @op: operation
+ * @f: to be listed
+ *
+ * Description: Checks if there's an operation
+ */
 typedef struct pr
 {
 	char *op;

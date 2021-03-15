@@ -27,31 +27,6 @@ _printf() is a family of functions that produces output according to a format
 .B %%
 - Prints a single %
 
-.SH IN FUTURE DEVELOPMENT (NOT SURE)
-.B %b
-- Converts from decimal to binary
-
-.B %u
-- Prints an unsigned integer
-
-.B %x
-- Converts a decimal to hexadecimal (in lowercase letter characters when applicable)
-
-.B %X
-- Converts a decimal to hexadecimal (in uppercase letter characters when applicable)
-
-.B %o
-- Converts a decimal to octal
-
-.B %r
-- Reverses a string
-
-.B %R
-- Converts to ROT13
-
-.B %S
-- Prints non-printable characters in hexadecimal
-
 .SH EXAMPLES
 .B --- Print a single character 'a' followed by a newline:
 

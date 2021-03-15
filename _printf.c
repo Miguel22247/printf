@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		{"%", print_mod},
 		{NULL, NULL}
 	};
-	va_start (ap, format);
+	va_start(ap, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
@@ -40,6 +40,6 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	va_end (ap);
+	va_end(ap);
 	return (length);
 }

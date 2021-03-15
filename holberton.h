@@ -31,4 +31,5 @@ int print_d(va_list list);
 int print_r(va_list list);
 int print_mod(va_list list);
 int print_d(va_list list);
+int _strlen(char *s);
 #endif

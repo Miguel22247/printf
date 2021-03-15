@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 	va_start(ap, format);
+	if (format == NULL)
+		return (-1);
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;

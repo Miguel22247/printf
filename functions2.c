@@ -7,10 +7,10 @@
 
 int print_c(va_list list)
 {
-	char *c = va_arg(list, char *);
+	char c;
 
-	write(1, &c, 1);
-	va_end(list);
+	c = va_arg(list, int);
+	_putchar(c);
 	return (1);
 }
 /**

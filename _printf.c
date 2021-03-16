@@ -20,31 +20,34 @@ int _printf(const char *format, ...)
 		{"r", print_r},
 		{NULL, NULL}
 	};
-	va_start(ap, format);
 	if (!format)
 		return (-1);
-	while (format != NULL && format[i] != '\0')
+	va_start(ap, format);
+	for (i = 0; format [i] != '\0'; i++)
 	{
-		j = 0;
 		if (format[i] == '%')
 		{
-			i += 1;
-			while (ops[j].op != NULL)
+			i++;
+			if (format[i] == '\0')
+				return (-1);
+			if (format[i] == '%')
 			{
-				if (format[i] == ops[j].op[0])
-				{
-					length += ops[j].f(ap);
-					break;
-				}
-				j++;
+				_putchar(format[i]);
+				length++;
+			}
+			for (j = 0; (ops + j)-> op != NULL; j++)
+			{
+				if (format[i] == *(ops + j)->op)
+					length += (ops + j)->f(ap);
 			}
 		}
 		else
 		{
-			length += _putchar(format[i]);
+			_putchar(format[i]);
+			length++;
 		}
-		i++;
 	}
 	va_end(ap);
 	return (length);
+
 }

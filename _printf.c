@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int count = -1;
+
 	pr_f ops[] = {
 	{"c", print_c},
 	{"s", print_s},
@@ -27,6 +28,14 @@ int _printf(const char *format, ...)
 	}
 	return (count);
 }
+
+/**
+ * _funcion - Helper function to print and call functions.
+ * @format: String recieved.
+ * @ops: special options.
+ * @ap: arguments
+ * Return: number of chars printed
+ */
 
 int _funcion(const char *format, pr_f ops[], va_list ap)
 {

@@ -20,7 +20,7 @@ In this project we need to write a function that works similar to the original f
 
 - functions.c - storage all the code related to `%d and %i`
 
-- functions2.c - storage all the code related to `%s and %c`
+- functions2.c - storage all the code related to `%s and %c`.
 
   ## How to test the "printf function"
 
@@ -28,6 +28,29 @@ In this project we need to write a function that works similar to the original f
 -   mv the file main.c that it's in test folder to printf folder `mv test/main.c /printf/`
 -   use  `$ gcc -Wall -Werror -Wextra -pedantic *.c`  to compile it **(If returns an error in printf("Unknown:[%r]"); use `-Wno-format` flag)**
 -   run with ./a.out (is the default output)
+
+## Flowchart
+```mermaid
+graph TD
+
+A((Start))  --> B[input something or not]
+
+B --> C{Conditions}
+
+C --> D[if input != NULL]
+
+D --> E[Go through what was entered]
+
+E --> F[Print while input is traversed]
+
+F --> G[Exit]
+
+C --> H[if input == NULL]
+
+H --> I[Print NULL]
+
+I --> J[Exit]
+```
 
 # Code Style
 

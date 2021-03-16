@@ -1,52 +1,69 @@
-# printf project
+# README for _printf project repository
 
-# Information
+This repository contains our printf function for holberton.
+
+Project: 0x11. C - printf
+
 Write your own printf function.
 
+# Information
+
+In this project we need to write a function that works similar to the original function printf in 'C', for to do this task first we start for understand the function and how printf does this function we make a very basic flowchart with the things that we believe that printf does, after that we started for writing all the functions that we use later and creating the header file with all the libraries and prototypes that we use in the program.
+
+## Files:
+
+- _printf.c - replaces the printf function
+
+- _putchar.c - putchar function, writes the character c to stdout
+
+- holberton.h - header file with all the definitions
+
+- functions.c - storage all the code related to `%d and %i`
+
+- functions2.c - storage all the code related to `%s and %c`
+
+  ## How to test the "printf function"
+
+-   Clone this [repository](https://github.com/Miguel22247/printf/)
+-   mv the file main.c that it's in test folder to printf folder `mv test/main.c /printf/`
+-   use  `$ gcc -Wall -Werror -Wextra -pedantic *.c`  to compile it **(If returns an error in printf("Unknown:[%r]"); use `-Wno-format` flag)**
+-   run with ./a.out (is the default output)
+
 # Code Style
-Betty code style
 
-# Requirements
-
-  # General
-      Allowed editors: vi, vim, emacs
-      All your files will be compiled on Ubuntu 14.04 LTS
-      Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-      All your files should end with a new line
-      A README.md file, at the root of the folder of the project is mandatory
-      Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-      You are not allowed to use global variables
-      No more than 5 functions per file
-      In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-      The prototypes of all your functions should be included in your header file called holberton.h
-      Don’t forget to push your header file
-      All your header files should be include guarded
-      Note that we will not provide the _putchar function for this project
-      
-# More Info
+Betty Code Style
  
- In this project we need to write a function that works similar to the original function printf in 'C', for to do this task first we start for understand the function and how printf does this function we make a very basic flowchart with the things that we believe that printf does, after that we started for writing all the functions that we use later and creating the header file with all the libraries and prototypes that we use in the program.
- 
-## How to test the "printf function"
-- [Clone]("https://github.com/Miguel22247/printf") this repository
-- mv the file main.c that it's in test folder to printf folder
-- use <code>$ gcc -Wall -Werror -Wextra -pedantic *.c</code> to compile it
-- run with ./a.out (is the default output)
-<br>
+# Tasks done
+  
+**0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life**
 
-  ## Authorized functions and macros
-- write (man 2 write)
-- malloc (man 3 malloc)
-- free (man 3 free)
-- va_start (man 3 va_start)
-- va_end (man 3 va_end)
-- va_copy (man 3 va_copy)
-- va_arg (man 3 va_arg)
-<br>
+Write a function that produces output according to a format.
 
-# Compilation
-Your code will be compiled this way:
-<code>$ gcc -Wall -Werror -Wextra -pedantic *.c</code>
+-   Prototype:  `int _printf(const char *format, ...);`
+-   Returns: the number of characters printed (excluding the null byte used to end output to strings)
+-   write output to stdout, the standard output stream
+-   `format`  is a character string. The format string is composed of zero or more directives. See  `man 3 printf`  for more detail. You need to handle the following conversion specifiers:
+    -   `c`
+    -   `s`
+    -   `%`
+-   You don’t have to reproduce the buffer handling of the C library  `printf`  function
+-   You don’t have to handle the flag characters
+-   You don’t have to handle field width
+-   You don’t have to handle precision
+-   You don’t have to handle the length modifiers
 
-# Created by:
-Jorge Tuset and Miguel Pacheco | Cohort 14 | Holberton School
+**1. Education is when you read the fine print. Experience is what you get if you don't**
+
+Handle the following conversion specifiers: `%d, %I`  
+
+**2. Just because it's in print doesn't mean it's the gospel**
+
+Create a man page for your function.
+
+# Authors
+
+[Jorge Tuset](https://github.com/jtusetgraniello) and [Miguel Pacheco](https://github.com/Miguel22247) | Cohort 14 | Holberton School
+
+# Copyright
+
+Jorge Tuset and Miguel Pacheco &copy; 2021 | All Rights Reserved

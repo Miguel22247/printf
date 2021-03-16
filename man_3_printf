@@ -61,7 +61,7 @@ _printf("%%\\n")
 man page printf(3) (man 3 printf)
 
 .SH BUGS
-At the moment NO Bugs :)
+Doesn't print strings when the condicion is NULL
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

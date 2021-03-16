@@ -30,6 +30,7 @@ In this project we need to write a function that works similar to the original f
 -   run with ./a.out (is the default output)
 
 ## Flowchart
+
 ```mermaid
 graph TD
 

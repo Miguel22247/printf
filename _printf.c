@@ -8,43 +8,64 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int length = 0;
-	int i = 0, j;
-
+	int count = -1;
 	pr_f ops[] = {
 	{"c", print_c},
 	{"s", print_s},
-	{"%", print_mod},
 	{"d", print_d},
+	{"%", print_mod},
 	{"i", print_d},
 	{"r", print_r},
 	{NULL, NULL}
 	};
-	va_start(ap, format);
-	if (!format)
-		return (-1);
-	while (format != NULL && format[i] != '\0')
+
+	if (format != NULL)
 	{
-		j = 0;
+		va_start(ap, format);
+		count = _funcion(format, ops, ap);
+		va_end(ap);
+	}
+	return (count);
+}
+
+int _funcion(const char *format, pr_f ops[], va_list ap)
+{
+	int count = 0, i, j;
+
+	for (i = 0; format[i] != '\0'; i++)
+	{
 		if (format[i] == '%')
 		{
-			i += 1;
-			while (ops[j].op != NULL)
+			if (format[i + 1] == '\0')
 			{
-				if (format[i] == ops[j].op[0])
+				return (-1);
+			}
+			for (j = 0; ops[j].op != NULL; j++)
+			{
+				if (format[i + 1] == ops[j].op[0])
 				{
-					length += ops[j].f(ap);
+					count = count + ops[j].f(ap);
 					break;
 				}
-				j++;
 			}
+			if (ops[j].op == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					count = count + 2;
+				}
+				else
+					return (-1);
+			}
+			i = i + 1;
 		}
 		else
 		{
-			length += _putchar(format[i]);
+			_putchar(format[i]);
+			count = count + 1;
 		}
-		i++;
 	}
-	va_end(ap);
-	return (length);
+	return (count);
 }

@@ -21,12 +21,19 @@ int print_c(va_list list)
 
 int print_s(va_list list)
 {
-	char *str = va_arg(list, char *);
-	int len = _strlen(str);
+	int i;
+	char *str2;
 
-	write(1, str, len);
-	va_end(list);
-	return (len);
+	str2 = va_arg(list, char *);
+
+	if (str2 == NULL)
+	{
+		_printf("(null)");
+		return (6);
+	}
+	for (i = 0; str2[i] != '\0'; i++)
+		_putchar(str2[i]);
+	return (i);
 }
 /**
  * print_mod - print a '%' sign

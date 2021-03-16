@@ -1,4 +1,4 @@
-.TH man 1 "03 March 2021" "0.9.8 Beta" "_printf man page"
+.TH man 1 "03 March 2021" "1.0 Release version" "_printf man page"
 .SH NAME
 .B _printf man page
 .SH SYNOPSIS
@@ -28,11 +28,11 @@ _printf() is a family of functions that produces output according to a format
 - Prints a single %
 
 .SH EXAMPLES
-.B --- Print a single character 'a' followed by a newline:
+.B --- Print a single character 'H' followed by a newline:
 
-_printf ("%c\\n", 'a');
+_printf ("%c\\n", 'H');
 
-# a
+# H
 
 
 .B --- Print a string of characters 'Holberton School!' followed by a newline:
@@ -58,10 +58,10 @@ _printf("%%\\n")
 .B More examples in the future (or maybe not)
 
 .SH SEE ALSO
-man page printf(3) (man 3 printf)
+.B man 3 printf (printf man page)
 
 .SH BUGS
-Doesn't print strings when the condicion is NULL
+NO BUGS :)
 
 .SH AUTHOR
 Jorge Tuset and Miguel Pacheco - Holberton School Cohort 14

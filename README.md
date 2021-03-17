@@ -25,7 +25,7 @@ In this project we need to write a function that works similar to the original f
   ## How to test the "printf function"
 
 -   Clone this [repository](https://github.com/Miguel22247/printf/)
--   mv the file main.c that it's in test folder to printf folder `mv test/main.c /printf/`
+-   move the file main.c that it's in test folder to printf folder `mv test/main.c /printf/`
 -   use  `$ gcc -Wall -Werror -Wextra -pedantic *.c`  to compile it **(If returns an error in printf("Unknown:[%r]"); use `-Wno-format` flag)**
 -   run with ./a.out (is the default output)
 

@@ -31,6 +31,7 @@ In this project we need to write a function that works similar to the original f
 
 ## Flowchart
 This is the form that the printf works in a very basic level **(is theory of how printf works)**
+
 ![mermaid-diagram-20210316174814](https://user-images.githubusercontent.com/66649043/111377833-e53ed180-867f-11eb-89b7-44a6e7dccd90.png)
 
 # Code Style
